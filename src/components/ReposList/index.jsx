@@ -23,8 +23,8 @@ const ReposList = ({ nomeUsuario }) => {
             <h1>Carregando...</h1>
         ) : (
             <ul className={styles.list}>
-            {repos.map(repositorio => (
-                <li className={styles.listItem} key={repositorio.id}>
+            {repos.map(({ id, name, language, html_url }) => (
+                <li className={styles.listItem} key={id}>
                     <div className={styles.itemName}>
                         <b>Nome:</b> 
                         {name}
